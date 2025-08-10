@@ -1,0 +1,4 @@
+# My App Config
+username = alice
+timeout = 30
+debug = true
