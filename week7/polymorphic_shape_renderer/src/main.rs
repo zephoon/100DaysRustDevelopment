@@ -71,7 +71,7 @@ fn main() {
             "3" => {
                 let b = input("Enter base:").parse::<f64>().unwrap_or(0.0);
                 let h = input("Enter height:").parse::<f64>().unwrap_or(0.0);
-                shapes.push(Box::new(Triangle { base: b, hegith: h }));
+                shapes.push(Box::new(Triangle { base: b, height: h }));
             }
             "4" => {
                 for (i, shape) in shapes.iter().enumerate() {
