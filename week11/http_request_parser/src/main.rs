@@ -20,7 +20,7 @@ fn handle_client(mut stream: TcpStream) -> std::io::Result<()> {
 
     let request = String::from_utf8_lossy(&buffer);
     let lines: Vec<&str> = request.lines().collect();
-    if let Some(request_line) = lines.get(0) {
+    if let Some(request_line) = lines.first() {
         println!("➡️  Request: {}", request_line);
     }
 
