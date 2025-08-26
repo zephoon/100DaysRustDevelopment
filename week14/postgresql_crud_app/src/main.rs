@@ -37,7 +37,7 @@ async fn add_todo(db: web::Data<PgPool>, json: web::Json<NewTodo>) -> impl Respo
         .await;
     match result {
         Ok(_) => HttpResponse::Created().body("✅ Todo added"),
-        Err(_) => HttpResponse::InternalServerError().body("❌ Failed to insert"),
+        Err(e) => HttpResponse::InternalServerError().body(format!("❌ Failed to insert {}", e)),
     }
 }
 
