@@ -1,0 +1,11 @@
+[package]
+name = "encrypted_notes_manager"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+aes = "0.7"
+block-modes = "0.8.1"
+hex = "0.4"
+block-padding = "0.2"
+rand = "0.9.2"
